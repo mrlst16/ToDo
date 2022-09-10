@@ -1,0 +1,58 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+# more
+*.ide*
+*.ide
+*.suo
+*.cache
+*.pdb
+*.lock
+
+#folders
+Packages/*
+packages/*
+*/obj/*
+.vs/*
+*/bin/*
+*/debug/*
+*/.sonarqube/*
+
+#Scratch Project
+/ScratchPaper/
+
+#appsettings
+*appsettings.*.json
+/ToDo/appSettings.json
+/ToDo.DAL.EntityFramework/appSettings.json
