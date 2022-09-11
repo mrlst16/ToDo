@@ -13,7 +13,10 @@ namespace ToDo
 
             var builder = WebApplication.CreateBuilder(args);
             // Add services to the container.
-            builder.Services.RegisterContexts(configuration);
+            builder.Services
+                .RegisterContexts(configuration)
+                .RegisterLoaders()
+                .RegisterProviders();
             builder.Services.AddControllers();
             builder.Services.AddSwaggerGen();
             
@@ -32,7 +35,7 @@ namespace ToDo
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-                options.RoutePrefix = string.Empty;
+                //options.RoutePrefix = string.Empty;
             });
 
             app.Run();

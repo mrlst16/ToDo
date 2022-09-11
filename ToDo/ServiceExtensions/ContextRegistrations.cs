@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Common.Interfaces.Repository;
+using Microsoft.EntityFrameworkCore;
 using ToDo.DAL.EntityFramework;
 
 namespace ToDo.ServiceExtensions
@@ -13,6 +14,7 @@ namespace ToDo.ServiceExtensions
                 o.EnableDetailedErrors(true);
                 o.UseSqlServer(connectionString);
             });
+            services.AddTransient(typeof(ISRDRepository<,>), typeof(ToDoRepository<,>));
             return services;
         }
     }
