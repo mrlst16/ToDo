@@ -41,12 +41,12 @@ namespace ToDo.Controllers
 
         [HttpGet("all/list")]
         public async Task<IActionResult> GetAllItmesByListIdAsync(
-            [FromQuery] int userid
+            [FromQuery] int listid
         )
         {
             return new OkObjectResult(new ApiResponse<IEnumerable<ToDoItem>>()
             {
-                Data = await _provider.GetAllToDosForList(userid),
+                Data = await _provider.GetAllToDosForList(listid),
                 Success = true,
                 SuccessMessage = "Successfully retrieved all items for list"
             });
@@ -69,7 +69,7 @@ namespace ToDo.Controllers
             {
                 Data = await _provider.SaveAsync(item),
                 Success = true,
-                SuccessMessage = "Successfully retrieved all items for list"
+                SuccessMessage = "Successfully created item"
             });
         }
 
@@ -82,7 +82,7 @@ namespace ToDo.Controllers
             {
                 Data = await _provider.UpdateLabel(request.ItemId, request.Label),
                 Success = true,
-                SuccessMessage = "Successfully retrieved all items for list"
+                SuccessMessage = "Successfully updated label"
             });
         }
 
@@ -95,7 +95,7 @@ namespace ToDo.Controllers
             {
                 Data = await _provider.UpdateStatus(request.ItemId, request.Status),
                 Success = true,
-                SuccessMessage = "Successfully retrieved all items for list"
+                SuccessMessage = "Successfully update status"
             });
         }
 

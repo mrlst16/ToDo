@@ -26,10 +26,11 @@ namespace ToDo.BLL
 
         public async Task<IEnumerable<ToDoItem>> GetAllToDosForUser(int userid)
         {
-            
 
-
-            throw new NotImplementedException();
+            var lists = (await _listRepository
+                .ReadAsync(x => x.DeletedUTC == null && x.UserId == userid)).ToList();
+            var listids = lists.Select(x => x.Id);
+            return await _repository.ReadAsync(x => x.DeletedUTC == null && listids.Contains(x.ToDoListId));
         }
 
         public async Task<int> SaveAsync(ToDoItem item)
