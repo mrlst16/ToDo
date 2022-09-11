@@ -8,7 +8,7 @@ using ToDo.Models.Requests;
 namespace ToDo.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/item")]
     public class ItemController : Controller
     {
         private readonly IToDoItemProvider _provider;
@@ -35,7 +35,6 @@ namespace ToDo.Controllers
             return new OkObjectResult(new ApiResponse<IEnumerable<ToDoItem>>()
             {
                 Data = await _provider.GetAllToDosForUser(userid),
-                Sucess = true,
                 SuccessMessage = "Successfully retrieved all items for user"
             });
         }
@@ -48,7 +47,7 @@ namespace ToDo.Controllers
             return new OkObjectResult(new ApiResponse<IEnumerable<ToDoItem>>()
             {
                 Data = await _provider.GetAllToDosForList(userid),
-                Sucess = true,
+                Success = true,
                 SuccessMessage = "Successfully retrieved all items for list"
             });
         }
@@ -69,7 +68,7 @@ namespace ToDo.Controllers
             return new OkObjectResult(new ApiResponse<int>()
             {
                 Data = await _provider.SaveAsync(item),
-                Sucess = true,
+                Success = true,
                 SuccessMessage = "Successfully retrieved all items for list"
             });
         }
@@ -82,7 +81,7 @@ namespace ToDo.Controllers
             return new OkObjectResult(new ApiResponse<int>()
             {
                 Data = await _provider.UpdateLabel(request.ItemId, request.Label),
-                Sucess = true,
+                Success = true,
                 SuccessMessage = "Successfully retrieved all items for list"
             });
         }
@@ -95,7 +94,7 @@ namespace ToDo.Controllers
             return new OkObjectResult(new ApiResponse<int>()
             {
                 Data = await _provider.UpdateStatus(request.ItemId, request.Status),
-                Sucess = true,
+                Success = true,
                 SuccessMessage = "Successfully retrieved all items for list"
             });
         }
@@ -108,7 +107,7 @@ namespace ToDo.Controllers
             return new OkObjectResult(new ApiResponse<bool>()
             {
                 Data = await _provider.SoftDeleteAsync(id),
-                Sucess = true,
+                Success = true,
                 SuccessMessage = "Successfully retrieved all items for list"
             });
         }

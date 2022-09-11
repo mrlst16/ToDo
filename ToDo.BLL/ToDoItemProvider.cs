@@ -19,16 +19,7 @@ namespace ToDo.BLL
         }
 
         public async Task<IEnumerable<ToDoItem>> GetAllToDosForUser(int userId)
-        {
-            var lists = await _listLoader.GetAllListsForUser(userId);
-            List<ToDoItem> result = new();
-
-            await Parallel.ForEachAsync(lists, async (list, token) =>
-            {
-                result.AddRange(list.Items);
-            });
-            return result;
-        }
+            => await _loader.GetAllToDosForUser(userId);
 
         public async Task<int> SaveAsync(ToDoItem item)
             => await _loader.SaveAsync(item);

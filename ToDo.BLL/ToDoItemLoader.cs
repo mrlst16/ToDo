@@ -7,12 +7,15 @@ namespace ToDo.BLL
     public class ToDoItemLoader : IToDoItemLoader
     {
         private readonly ISRDRepository<ToDoItem, int> _repository;
+        private readonly ISRDRepository<ToDoList, int> _listRepository;
 
         public ToDoItemLoader(
-            ISRDRepository<ToDoItem, int> repository
+            ISRDRepository<ToDoItem, int> repository,
+            ISRDRepository<ToDoList, int> listRepository
             )
         {
             _repository = repository;
+            _listRepository = listRepository;
         }
 
         public async Task<IEnumerable<ToDoItem>> GetAllToDosForList(int listId)
@@ -20,6 +23,14 @@ namespace ToDo.BLL
 
         public async Task<ToDoItem> ReadAsync(int id)
             => await _repository.ReadAsync(id);
+
+        public async Task<IEnumerable<ToDoItem>> GetAllToDosForUser(int userid)
+        {
+            
+
+
+            throw new NotImplementedException();
+        }
 
         public async Task<int> SaveAsync(ToDoItem item)
             => await _repository.SaveAsync(item);

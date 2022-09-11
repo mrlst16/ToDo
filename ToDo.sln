@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo.Models", "ToDo.Models\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScratchPaper", "ScratchPaper\ScratchPaper.csproj", "{E2295723-D296-4777-A5C9-5C7DA9401887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.BLL", "ToDo.BLL\ToDo.BLL.csproj", "{ED578A12-77AF-4BE0-836B-F2EF7B46B75E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo.BLL", "ToDo.BLL\ToDo.BLL.csproj", "{ED578A12-77AF-4BE0-836B-F2EF7B46B75E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.AspDotNet", "..\..\..\OneDrive\Documents\Repos\Common\Common.AspDotNet\Common.AspDotNet.csproj", "{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{ED578A12-77AF-4BE0-836B-F2EF7B46B75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED578A12-77AF-4BE0-836B-F2EF7B46B75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED578A12-77AF-4BE0-836B-F2EF7B46B75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{3E17CF39-FAC1-4C0A-B3DA-36AA3B450E86} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
 		{81B8EEEE-11E4-4D69-B6BE-F55DF414313B} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
 		{6B1457F3-2444-46BF-AE40-429BF08E1C97} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
+		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC1630E2-DD58-48D0-A792-AA86AB256B20}

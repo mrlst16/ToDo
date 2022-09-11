@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -21,11 +22,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\OneDrive\Documents\Repos\Common\Common.AspDotNet\Common.AspDotNet.csproj" />
     <ProjectReference Include="..\..\..\..\OneDrive\Documents\Repos\Common\Common.Interfaces\Common.Interfaces.csproj" />
     <ProjectReference Include="..\..\..\..\OneDrive\Documents\Repos\Common\Common\Common.csproj" />
     <ProjectReference Include="..\ToDo.BLL\ToDo.BLL.csproj" />
     <ProjectReference Include="..\ToDo.DAL.EntityFramework\ToDo.DAL.EntityFramework.csproj" />
     <ProjectReference Include="..\ToDo.Interfaces\ToDo.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middleware\" />
   </ItemGroup>
 
 </Project>

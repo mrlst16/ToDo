@@ -24,5 +24,6 @@ namespace ToDo.Interfaces
         //d.Get all TODOs for specific list
         Task<IEnumerable<ToDoItem>> GetAllToDosForList(int listId);
         Task<ToDoItem> ReadAsync(int id);
+        Task<IEnumerable<ToDoItem>> GetAllToDosForUser(int userid);
     }
 }

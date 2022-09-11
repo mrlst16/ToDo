@@ -1,3 +1,4 @@
+using Common.AspDotNet.Handlers;
 using Common.Helpers;
 using Common.Interfaces.Repository;
 using ToDo.DAL.EntityFramework;
@@ -9,13 +10,14 @@ namespace ToDo
     {
         public static void Main(string[] args)
         {
-            var configuration = ConfigurationHelper.FromJsonFile();
+            var configuration = ConfigurationHelper.FromJsonFiles();
 
             var builder = WebApplication.CreateBuilder(args);
             // Add services to the container.
             builder.Services
                 .RegisterContexts(configuration)
                 .RegisterLoaders()
+                .RegisterValidators()
                 .RegisterProviders();
             builder.Services.AddControllers();
             builder.Services.AddSwaggerGen();
@@ -26,8 +28,11 @@ namespace ToDo
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
-
+            app.Use(async (context, next) =>
+            {
+                ErrorHandlingMiddleware errorHandler = new ErrorHandlingMiddleware();
+                await errorHandler.Handle(context, next);
+            });
 
             app.MapControllers();
 

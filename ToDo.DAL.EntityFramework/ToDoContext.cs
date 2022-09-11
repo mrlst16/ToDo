@@ -51,10 +51,10 @@ namespace ToDo.DAL.EntityFramework
                     .WithOne()
                     .HasForeignKey(x => x.ToDoListId);
                 entityTypeBuilder.HasIndex(x => new
-                    {
-                        x.Label,
-                        x.UserId
-                    })
+                {
+                    x.Label,
+                    x.UserId
+                })
                     .IsUnique();
             });
 
@@ -75,6 +75,19 @@ namespace ToDo.DAL.EntityFramework
             {
                 entityTypeBuilder.HasKey(x => x.Id);
             });
+
+            SetupExampleData(modelBuilder);
+        }
+
+        private static void SetupExampleData(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasData(new User()
+                {
+                    Id = 1,
+                    ExternalId = "OAuthProviderExample_1",
+                    UserName = "Stephen Rodgers"
+                });
         }
     }
 }
