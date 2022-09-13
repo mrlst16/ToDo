@@ -1,5 +1,5 @@
-﻿using Common.Models.Entities;
-using Common.Repository;
+﻿using Common.EntityFramework.Repository;
+using Common.Models.Entities;
 
 namespace ToDo.DAL.EntityFramework
 {

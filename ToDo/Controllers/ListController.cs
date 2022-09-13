@@ -59,9 +59,10 @@ namespace ToDo.Controllers
 
         [HttpGet("all")]
         public async Task<IActionResult> GetAllListsAsync(
-            [FromQuery] int userid
+            [FromQuery] int userid = -1
         )
         {
+            if (userid < 0) throw new BadHttpRequestException("UserId must not be empy and must be greater than 1");
             return new OkObjectResult(new ApiResponse<IEnumerable<ToDoList>>()
             {
                 Data = await _provider.GetAllListsForUser(userid),

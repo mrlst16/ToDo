@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\OneDrive\Documents\Repos\Common\Common.EntityFramework\Common.EntityFramework.csproj" />
     <ProjectReference Include="..\..\..\..\OneDrive\Documents\Repos\Common\Common\Common.csproj" />
     <ProjectReference Include="..\ToDo.Models\ToDo.Models.csproj" />
   </ItemGroup>

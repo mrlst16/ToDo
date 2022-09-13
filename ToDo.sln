@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDo.BLL", "ToDo.BLL\ToDo.B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.AspDotNet", "..\..\..\OneDrive\Documents\Repos\Common\Common.AspDotNet\Common.AspDotNet.csproj", "{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.EntityFramework", "..\..\..\OneDrive\Documents\Repos\Common\Common.EntityFramework\Common.EntityFramework.csproj", "{97AEA91A-5670-40C5-A04C-1EA91CDB624D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AEA91A-5670-40C5-A04C-1EA91CDB624D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AEA91A-5670-40C5-A04C-1EA91CDB624D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AEA91A-5670-40C5-A04C-1EA91CDB624D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AEA91A-5670-40C5-A04C-1EA91CDB624D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{81B8EEEE-11E4-4D69-B6BE-F55DF414313B} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
 		{6B1457F3-2444-46BF-AE40-429BF08E1C97} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
 		{0F44C499-E29C-4857-8F69-AABEEE8E2C2F} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
+		{97AEA91A-5670-40C5-A04C-1EA91CDB624D} = {5A342184-6F9A-42A3-A0B1-64407A28F10A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC1630E2-DD58-48D0-A792-AA86AB256B20}

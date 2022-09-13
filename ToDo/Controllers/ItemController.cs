@@ -29,9 +29,11 @@ namespace ToDo.Controllers
 
         [HttpGet("all/user")]
         public async Task<IActionResult> GetAllItmesByUserIdAsync(
-            [FromQuery] int userid
+            [FromQuery] int userid = -1
         )
         {
+            if (userid < 0) throw new BadHttpRequestException("UserId must not be empty and must be greater than 1");
+
             return new OkObjectResult(new ApiResponse<IEnumerable<ToDoItem>>()
             {
                 Data = await _provider.GetAllToDosForUser(userid),
@@ -44,6 +46,8 @@ namespace ToDo.Controllers
             [FromQuery] int listid
         )
         {
+            if (listid < 0) throw new BadHttpRequestException("ListId must not be empty and must be greater than 1");
+
             return new OkObjectResult(new ApiResponse<IEnumerable<ToDoItem>>()
             {
                 Data = await _provider.GetAllToDosForList(listid),
@@ -53,10 +57,11 @@ namespace ToDo.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> CreateListAsync(
+        public async Task<IActionResult> CreateItemAsync(
             [FromBody] CreateItemRequest request
         )
         {
+
             var item = new ToDoItem()
             {
                 Id = default(int),
