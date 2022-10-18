@@ -22,7 +22,7 @@ namespace ToDo.Validators
                 .WithMessage("Lable may not be null or empty");
 
             RuleFor(x => x)
-                .MustAsync(async (x, c) => 
+                .MustAsync(async (x, c) =>
                     await LabelBeAvailable(loader, x.UserId, x.Label));
 
         }

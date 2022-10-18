@@ -3,7 +3,7 @@ using ToDo.Models.Requests;
 
 namespace ToDo.Validators
 {
-    public class CreateItemRequestValidator: AbstractValidator<CreateItemRequest>
+    public class CreateItemRequestValidator : AbstractValidator<CreateItemRequest>
     {
         public CreateItemRequestValidator()
         {

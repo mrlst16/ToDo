@@ -1,7 +1,5 @@
 using Common.AspDotNet.Handlers;
 using Common.Helpers;
-using Common.Interfaces.Repository;
-using ToDo.DAL.EntityFramework;
 using ToDo.ServiceExtensions;
 
 namespace ToDo
@@ -21,7 +19,7 @@ namespace ToDo
                 .RegisterProviders();
             builder.Services.AddControllers();
             builder.Services.AddSwaggerGen();
-            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -48,4 +46,7 @@ namespace ToDo
 
 
     }
+
+
+
 }

@@ -1,6 +1,4 @@
 ﻿using FluentValidation;
-using ToDo.BLL;
-using ToDo.Interfaces;
 using ToDo.Models.Requests;
 using ToDo.Validators;
 
